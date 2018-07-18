@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/bulma/0.7.1/css/bulma.min.css" rel="stylesheet">
+  <title>视频播放器</title>
+  <style>
+    .top {
+      height: 100px;
+      margin: 0 0 30px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="top has-background-primary"><h1 class="title is-1">AICODER 视频列表禁止外泄</h1></div>
+  <div class="main columns">
+    <div class="nav-list-wrap column  is-one-quarter">
+      <ul>
+        {{each files as file index}}
+          <li><a href="javascript:" class="nav-link" file="{{file}}">{{file}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="video-box column">
+      <div class="box columns">
+        <div class="column">
+          <video id="TVBox" src="" width="100%" height="100%" controls="controls"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        版权所有||禁止外泄
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.nav-link').on('click', function() {
+        $('#TVBox').attr('src', $(this).attr('file'));
+      });
+    });
+  </script>
+</body>
+</html>
