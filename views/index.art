@@ -18,7 +18,7 @@
   <div class="main columns">
     <div class="nav-list-wrap column  is-one-quarter">
       <ul>
-        {{each files as file index}}
+        {{each files file index}}
           <li><a href="javascript:" class="nav-link" file="{{file}}">{{file}}</a></li>
         {{/each}}
       </ul>
