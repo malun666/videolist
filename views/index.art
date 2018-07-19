@@ -19,7 +19,7 @@
     <div class="nav-list-wrap column  is-one-quarter">
       <ul>
         {{each files file index}}
-          <li><a href="javascript:" class="nav-link" file="{{file}}">{{file}}</a></li>
+          <li><a href="javascript:" class="nav-link" file="{{file }}">{{file.split('.')[0].replace('/video/', '')}}</a></li>
         {{/each}}
       </ul>
     </div>
