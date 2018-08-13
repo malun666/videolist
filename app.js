@@ -60,15 +60,15 @@ function getItemData(item, purl, pId = -1) {
     return {
       isFile: false,
       id,
-      text: item,
-      name: path.join(purl.replace('/public', ''), item),
+      name: item,
+      text: path.join(purl.replace('/public', ''), item),
       children: childFiles,
       title: item
     }
   }
   return {
-    name: path.join(purl.replace('/public', ''), item),
-    text: item,
+    name: item,
+    text: path.join(purl.replace('/public', ''), item),
     id: id,
     isFile: true,
     title: item,

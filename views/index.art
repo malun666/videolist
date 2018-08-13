@@ -67,7 +67,7 @@
             callback: {
               onClick: function(event, treeId, treeNode) {
                 if(treeNode.isFile)
-                $('#TVBox').attr('src', treeNode.name)
+                $('#TVBox').attr('src', treeNode.text)
               }
             }
           }, data)
