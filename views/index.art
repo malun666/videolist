@@ -14,12 +14,15 @@
       height: 100px;
       margin: 0 0 30px 0;
     }
+    .top h1 {
+      line-height: 100px;
+    }
   </style>
 </head>
 
 <body>
   <div class="top has-background-primary">
-    <h1 class="title is-1">AICODER 视频列表禁止外泄</h1>
+    <h1 class="title is-1 has-text-light">AICODER 视频列表禁止外泄</h1>
   </div>
   <div class="main columns">
     <div class="nav-list-wrap column  is-one-quarter">
