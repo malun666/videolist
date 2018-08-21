@@ -32,13 +32,16 @@ app.use('/listarry', (req, res) => {
   fs.readdir(path.join(__dirname, '/public/video'), (err, files) => {
     let data = files.map((item) => {
       return getItemData(item,'/public/video');
+
       // if (item == '.DS_Store') {
       //   return;
       // }
+
       // if(fs.statSync(item).isDirectory()) {
 
       // }
       // filesArray.push(path.join('/video', item));
+      
     });
     res.json(data.filter(item => item));
   })
@@ -62,7 +65,7 @@ function getItemData(item, purl, pId = -1) {
       id,
       name: item,
       text: path.join(purl.replace('/public', ''), item),
-      children: childFiles,
+      children: childFiles.filter(item => item),
       title: item
     }
   }
