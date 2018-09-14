@@ -51,6 +51,9 @@ function getItemData(item, purl, pId = -1) {
   if (item == '.DS_Store') {
     return null;
   }
+  if(/^\./gi.test(item)) {
+    return null;
+  }
   let id = Date.now();
   if(fs.statSync(path.join(__dirname,purl, item)).isDirectory()) {
     // fs.readdirSync()

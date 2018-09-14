@@ -1,3 +1,5 @@
 node_modules
 public/video
 .DS*
+public/._.DS_Store
+._.DS_Store
